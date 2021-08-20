@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "JobProcessorPoc": {
+      "commandName": "Project",
+      "commandLineArgs": "5"
+    }
+  }
+}
