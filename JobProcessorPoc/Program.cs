@@ -21,10 +21,9 @@ namespace JobProcessorPoc
             var sw = new Stopwatch();
             sw.Start();
 
-            var numberOfJobs = Convert.ToInt32(args[0]);
-            if (numberOfJobs == 0)
+            if (!int.TryParse(args[0], out var numberOfJobs) || numberOfJobs == 0)
             {
-                Logger.Log("There are no jobs to process.");
+                Logger.Log("Invalid entry parameter.");
                 return;
             }
 
