@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  jobprocessorpoc:
+    image: jobprocessorpoc
+    container_name: job-processor-poc
+    build:
+      context: .
+      dockerfile: JobProcessorPoc/Dockerfile
