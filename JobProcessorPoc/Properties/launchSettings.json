@@ -3,6 +3,9 @@
     "JobProcessorPoc": {
       "commandName": "Project",
       "commandLineArgs": "5"
+    },
+    "Docker": {
+      "commandName": "Docker"
     }
   }
 }
