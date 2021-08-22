@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   jobprocessorpoc:
-    image: jobprocessorpoc
+    image: job-processor-poc
     container_name: job-processor-poc
     build:
       context: .
