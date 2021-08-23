@@ -1,3 +1,5 @@
+using JobProcessorPoc.Api.Services;
+using k8s;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -17,8 +19,9 @@ namespace JobProcessorPoc.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+            services.AddSingleton<IKubernetes>(new Kubernetes(KubernetesClientConfiguration.BuildDefaultConfig()));
+            services.AddSingleton<IJobService, JobService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

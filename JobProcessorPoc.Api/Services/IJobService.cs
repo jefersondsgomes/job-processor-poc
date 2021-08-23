@@ -1,9 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using k8s.Models;
+using System.Threading.Tasks;
 
 namespace JobProcessorPoc.Api.Services
 {
     public interface IJobService
     {
-        Task CreateJobsAsync(int numberOfJobs);
+        Task<V1PodList> GetPods();
+        Task<V1Job> CreateJob(int numberOfJobs);
     }
 }

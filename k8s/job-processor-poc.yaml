@@ -10,5 +10,5 @@ spec:
         - name: job-processor-poc
           image: jefersondsgomes/job-processor-poc:latest
           args:
-            - "10"
+            - "5"
       restartPolicy: Never
