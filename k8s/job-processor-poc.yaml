@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: job-processor-poc-
+spec:
+  ttlSecondsAfterFinished: 5
+  template:
+    spec:
+      containers:
+        - name: job-processor-poc
+          image: jefersondsgomes/job-processor-poc:latest
+          args:
+            - "5"
+      restartPolicy: Never
