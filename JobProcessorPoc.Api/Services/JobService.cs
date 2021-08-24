@@ -1,6 +1,5 @@
 ﻿using k8s;
 using k8s.Models;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -49,12 +48,7 @@ namespace JobProcessorPoc.Api.Services
 
         public async Task<V1PodList> GetPods()
         {
-            var config = KubernetesClientConfiguration.BuildDefaultConfig();
-            IKubernetes client = new Kubernetes(config);
-            Console.WriteLine("Starting Request!");
-
-            var podList = await client.ListNamespacedPodAsync("default");
-            return podList;
+            return await _kubernetes.ListNamespacedPodAsync("default");
         }
     }
 }

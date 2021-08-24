@@ -10,18 +10,20 @@
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "IIS Express": {
-      "commandName": "IISExpress",
-      "launchUrl": "weatherforecast",
+      "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "K8S_CONFIG": "%USERPROFILE%\\.kube\\config",
+        "K8S_CONTEXT": "docker-desktop"
+
       }
     },
     "JobProcessorPoc.Api": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "K8S_CONFIG": "%USERPROFILE%\\.kube\\config",
+        "K8S_CONTEXT": "docker-desktop"
       },
       "dotnetRunMessages": "true",
       "applicationUrl": "http://localhost:5000"
